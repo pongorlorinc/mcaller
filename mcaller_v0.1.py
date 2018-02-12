@@ -160,8 +160,6 @@ mutationhandle = open(mutationfile, "w+")
 
 mutationhandle.write("chr\tpos\tref\talt\tstatus\taccept\t%s\n" % ("\t".join(os.path.basename(bamlist[y]) for y in range(0, len(bamlist)))))
 
-sys.exit()
-
 print ("Importing genome:")
 records = SeqIO.to_dict(SeqIO.parse(open(genome_file), 'fasta'))
 print ("\tfinished importing genome")

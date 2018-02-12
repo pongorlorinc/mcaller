@@ -35,7 +35,7 @@ These are the requirements (listed in requirements.txt)
       -g GENOME_FILE, --ref=GENOME_FILE
                             path to fasta (required)
       -b BED, --bed=BED     bed file (required)
-      -i BAM, --in=BAM      bam files, semicolon ';' separated (required)
+      -i BAM, --in=BAM      bam files, semicolon ',' separated (required)
       -o OUT_FOLDER, --out=OUT_FOLDER
                             output folder to store files (required)
       -y, --coord           treat bed as exact coordiantes (quicker if mutations

@@ -814,7 +814,7 @@ def get_region(bed_input):
 bedfile = open(options.bed, "r")
 
 genes = [line.rstrip().split('\t') for line in bedfile]
-sys.exit()
+
 for k in genes:
 	get_region(k)
 mutationhandle.close()

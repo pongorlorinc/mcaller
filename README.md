@@ -5,7 +5,7 @@ This program is used to perform joint genotyping of multiple BAM files.
 The output is a simple tab separated file (currently not VCF).
 
 ## Install 
-These are the requirements (listed in requirements.txt)
+These are the requirements (listed in requirements.txt). Python version used: 2.7
 
     a) pysam           
     b) scipy
@@ -18,7 +18,7 @@ These are the requirements (listed in requirements.txt)
           pip install -r requirements
           
     b) or create a virtualenv:
-          virtualenv venv
+          virtualenv --python=/usr/bin/python2.7 venv
           source venv/bin/activate
           pip install -r requirements
           

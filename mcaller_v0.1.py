@@ -704,7 +704,7 @@ def get_region(bed_input):
 		if ref_base in base:
 			background_probs, min_p = calculate_region_pvalues(i, num_of_samples, b_a, ref_segment, m_end, mut, cov, g_m_start)
 			background_p = active_region(cov, mut, i, num_of_samples, 0)
-			
+			print("%d\t%g\n" % (i+g_m_start, background_p))	
 			if background_p < 0.05 or min_p < 0.05:
 				strand_probs, qual_probs = calculate_strand_and_qual_probs(i, num_of_samples, f_q_m, r_q_m, ref_segment, background_probs)
 
@@ -741,8 +741,9 @@ def get_region(bed_input):
 							if germline[l] == j:
 								in_germline = 1
 
-							if in_germline == 0:
-								somatic.append(j)
+						if in_germline == 0:
+							somatic.append(j)
+
 
 				if len(germline) > 0:
 					mut_type = "germline"
@@ -819,4 +820,3 @@ for k in genes:
 	get_region(k)
 mutationhandle.close()
 bedloghandle.close()
-
